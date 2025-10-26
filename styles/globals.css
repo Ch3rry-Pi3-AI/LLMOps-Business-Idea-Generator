@@ -1,10 +1,43 @@
+/* -------------------------------------------------------------------
+   🎨 LLMOps Business Idea Generator – Global Styles (Enhanced Styling)
+   -------------------------------------------------------------------
+   This stylesheet defines the global theme, typography, and Markdown
+   presentation for the Business Idea Generator frontend.
+
+   It extends the base design by adding detailed heading, paragraph,
+   and list formatting rules for Markdown content rendered in real time
+   from the OpenAI API output.
+
+   Notes
+   -----
+   - Integrates Tailwind CSS utilities for responsive design.
+   - Implements light/dark themes using CSS variables.
+   - Defines `.markdown-content` styles to ensure consistent typography.
+------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------
+   📦 Tailwind Import
+------------------------------------------------------------------- */
 @import "tailwindcss";
 
+
+/* -------------------------------------------------------------------
+   🌈 Root Theme Variables (Light Mode Defaults)
+------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff;   /* Default light background */
+  --foreground: #171717;   /* Default dark text colour */
 }
 
+
+/* -------------------------------------------------------------------
+   🧩 Tailwind Theme Integration
+------------------------------------------------------------------- */
+/**
+ * Inline theme configuration allows Tailwind to consume
+ * the custom variables declared above.
+ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,19 +45,38 @@
   --font-mono: var(--font-geist-mono);
 }
 
+
+/* -------------------------------------------------------------------
+   🌙 Dark Mode Overrides
+------------------------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a;  /* Deep grey background for dark mode */
+    --foreground: #ededed;  /* Light text for dark mode */
   }
 }
 
+
+/* -------------------------------------------------------------------
+   🖋️ Base Body Styles
+------------------------------------------------------------------- */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* -------------------------------------------------------------------
+   🧾 Markdown Content Styling
+------------------------------------------------------------------- */
+/**
+ * The `.markdown-content` class styles headings, paragraphs, lists,
+ * and inline text for Markdown-rendered content using ReactMarkdown.
+ *
+ * This ensures that headings, lists, and dividers maintain consistent
+ * sizing and spacing across light and dark themes.
+ */
 @layer base {
   .markdown-content h1 {
     font-size: 2em;
