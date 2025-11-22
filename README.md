@@ -24,13 +24,10 @@ A subscription-enabled SaaS that:
 
 ## ⚠️ Note on API timeouts
 
-If your app takes **> 60 seconds** to respond, you might see a **403** in the browser console.
-A community fix is documented in `community_contributions/jwt_token_60s_fix.md`. Apply it if you encounter this timeout.
-
 ## Step 1: Enable Clerk Billing
 
 1. Open the [Clerk Dashboard](https://dashboard.clerk.com)
-2. Select your **SaaS** application
+2. Select your **LLMOps Business Idea Generator** application
 3. Click **Configure** (top navigation)
 4. Click **Subscription Plans** (left sidebar)
 5. Click **Get Started** if prompted
