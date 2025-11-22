@@ -38,7 +38,7 @@ If you hit the 60s timeout, apply that fix.
 
 ### Step 2: Configure Your Clerk Application
 
-1. **Application name:** SaaS
+1. **Application name:** LLMOps Business Idea Generator
 2. **Sign-in options:** enable
 
    * Email
